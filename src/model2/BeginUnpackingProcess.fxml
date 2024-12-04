@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.ScrollPane?>
+
+
+<AnchorPane id="AnchorPane" fx:id="main" prefHeight="721.0" prefWidth="1351.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model2.BeginUnpackingProcessController">
+    <children>
+        <MenuBar prefHeight="29.0" prefWidth="1351.0" style="-fx-background-color: #72f7fc;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" onAction="#loadHome" onShowing="#loadHome" text="Home">
+                  <items>
+                     <MenuItem mnemonicParsing="false" onAction="#loadHome" text="Go TO Home" />
+                  </items></Menu>
+          
+      </menus>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                 <!-- <Light.Distant />-->
+               </light>
+            </Lighting>
+         </effect>
+    </MenuBar>
+      <AnchorPane layoutY="28.0" prefHeight="692.0" prefWidth="1351.0" style="-fx-background-color: #010b17;">
+         <children>
+            <!--<TilePane fx:id="loadPane1" layoutX="47.0" layoutY="53.0" prefHeight="517.0" prefWidth="883.0" style="-fx-background-color: #ffffff;"/>-->
+            <ScrollPane layoutX="150.0" layoutY="40.0" >
+          <content>
+                <TilePane fx:id="loadPane" layoutX="150.0" layoutY="40.0" prefHeight="622.0" prefWidth="500.0" style="-fx-background-color: #ffffff;" />
+
+         </content>
+        </ScrollPane>
+        <!--    <TilePane fx:id="loadPane3" layoutX="580.0" layoutY="40.0" prefHeight="622.0" prefWidth="230.0" style="-fx-background-color: #ffffff;" />
+            <TilePane fx:id="loadPane4" layoutX="841.0" layoutY="41.0" prefHeight="622.0" prefWidth="230.0" style="-fx-background-color: #ffffff;" />
+            <TilePane fx:id="loadPane5" layoutX="1107.0" layoutY="41.0" prefHeight="622.0" prefWidth="230.0" style="-fx-background-color: #ffffff;" />
+            <TilePane fx:id="loadPane2" layoutX="295.0" layoutY="41.0" prefHeight="622.0" prefWidth="230.0" style="-fx-background-color: #ffffff;" />-->
+            <!--<Label alignment="CENTER" layoutX="287.0" layoutY="7.0" prefHeight="40.0" prefWidth="218.0" text="Power Sensor[17:32]" textAlignment="CENTER" textFill="#72f7fc" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="1113.0" layoutY="7.0" prefHeight="40.0" prefWidth="218.0" text="Power Sensor[65:69]" textAlignment="CENTER" textFill="#72f7fc" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="841.0" layoutY="7.0" prefHeight="40.0" prefWidth="218.0" text="Power Sensor[49:64]" textAlignment="CENTER" textFill="#72f7fc" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="580.0" layoutY="7.0" prefHeight="40.0" prefWidth="218.0" text="Power Sensor[33:48]" textAlignment="CENTER" textFill="#72f7fc" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>-->
+            <Label alignment="CENTER" layoutX="157.0" layoutY="7.0" prefHeight="41.0" prefWidth="218.0" text="Power Sensors" textAlignment="CENTER" textFill="#72f7fc" textOverrun="CENTER_ELLIPSIS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

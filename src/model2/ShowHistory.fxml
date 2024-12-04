@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="1351.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model2.ShowHistoryController">
+    <children>
+         <MenuBar prefHeight="25.0" prefWidth="1351.0" style="-fx-background-color: #72f7fc;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" onAction="#loadHome" onShowing="#loadHome" text="Home">
+                  <items>
+                     <MenuItem mnemonicParsing="false" onAction="#loadHome" text="Go TO Home" />
+                  </items></Menu>
+      </menus>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                 
+               </light>
+            </Lighting>
+         </effect>
+    </MenuBar>
+    <TableView fx:id="tableView" layoutX="45.0" layoutY="79.0" prefHeight="465.0" prefWidth="404.0" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="751.0" AnchorPane.topAnchor="79.0">
+      <columns>
+        <TableColumn fx:id="snCol" prefWidth="115.0" text="SubSystem" />
+        <TableColumn fx:id="nameCol1" prefWidth="163.0" text="Session Number" />
+            <TableColumn fx:id="ID1Col" prefWidth="150.0" text="Unpacking Date/Time" />
+            <TableColumn fx:id="FileNameCol" prefWidth="123.0" text="File Name" />
+      </columns>
+    </TableView>
+    <ListView fx:id="listView" layoutX="516.0" layoutY="79.0" prefHeight="465.0" prefWidth="232.0" AnchorPane.bottomAnchor="56.0" AnchorPane.rightAnchor="452.0" AnchorPane.topAnchor="79.0" />
+    <Label layoutX="516.0" layoutY="44.0" text="Selected Sessions" AnchorPane.rightAnchor="589.0" AnchorPane.topAnchor="44.0">
+      <font>
+        <Font name="System Bold" size="12.0" />
+      </font>
+    </Label>
+      <Button layoutX="1051.0" layoutY="204.0" mnemonicParsing="false" onAction="#Store" prefHeight="58.0" prefWidth="208.0" style="-fx-background-color: #010b17;" text="Next" textFill="#72f7fc"/>
+      
+    
+  </children>
+    
+</AnchorPane>

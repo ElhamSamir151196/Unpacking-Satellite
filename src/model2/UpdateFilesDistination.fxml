@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="140.0" prefWidth="432.0" style="-fx-background-color: #010b17;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model2.UpdateFilesDistinationController">
+   <children>
+    
+      <Label layoutX="27.0" layoutY="15.0" prefHeight="20.0" prefWidth="98.0" text="Seclect File" textFill="#00f9ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="293.0" layoutY="40.0" mnemonicParsing="false" onAction="#buttom2" style="-fx-background-color: #00f9ff;" text="Browse" textFill="#010b17" />
+      <Button layoutX="355.0" layoutY="40.0" mnemonicParsing="false" onAction="#saveOfflineFilePath" prefHeight="25.0" prefWidth="55.0" style="-fx-background-color: #00f9ff;" text="Save" textFill="#010b17" />
+      <ListView fx:id="listView2" layoutX="25.0" layoutY="40.0" prefHeight="25.0" prefWidth="246.0" />
+   </children>
+</AnchorPane>

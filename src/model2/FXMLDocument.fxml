@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="700.0" prefWidth="1351.0" style="-fx-background-image: url('stars_sky_space_car_113629_1920x1080.jpg')" stylesheets="newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model2.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="200.0" />
+      <ImageView fitHeight="700.0" fitWidth="1351.0" layoutY="-1.0">
+         <image>
+            <Image url="@Nour.png" />
+         </image>
+      </ImageView>
+      <!--<Button id="button" layoutX="146.0" layoutY="284.0" mnemonicParsing="false" onAction="#loadInitialization" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #018f97;" text="Initialization" textAlignment="CENTER" textFill="WHITE" underline="true" />-->
+      <Button layoutX="146.0" layoutY="326.0" mnemonicParsing="false" onAction="#loadDesignNewTab" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #018f97;" text="Select Sensors to be shown" textFill="WHITE" />
+      <Button layoutX="146.0" layoutY="370.0" mnemonicParsing="false" onAction="#loadBeginUnpackingProcess" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #018f97;" text="View Archived Telemetry Data" textFill="#f4f5f2" />
+      <Text fill="#9d9477" layoutX="192.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 48;" text="UnPacking System" textAlignment="CENTER" visible="false" />
+      <Button layoutX="146.0" layoutY="413.0" mnemonicParsing="false" onAction="#loadDesignedTabs" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #018f97;" text="Show selected sensors" textFill="WHITE" />
+      <Button layoutX="146.0" layoutY="454.0" mnemonicParsing="false" onAction="#LoadUpdateFilesDirectory" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #018f97;" text="Archive Telemetry Data" textFill="WHITE" />
+      <Button layoutX="146.0" layoutY="499.0" mnemonicParsing="false" onAction="#ChangeDBSetting" prefHeight="32.0" prefWidth="185.0" style="-fx-background-color: #018f97;" text="DataBase Setting" textFill="WHITE" />
+     <!-- <JFXToggleButton fx:id="MOOD" layoutX="1183.0" layoutY="22.0" onAction="#ChangeMood" prefHeight="32.0" prefWidth="129.0" textAlignment="CENTER" textFill="WHITE" toggleColor="RED" toggleLineColor="#ff9989" />-->
+      <!--<Label layoutX="1031.0" layoutY="38.0" prefHeight="32.0" prefWidth="129.0" style="-fx-font-size: 19; -fx-text-fill: #ffffff; -fx-font-weight: bold;" text="Online Mood" />-->
+   </children>
+</AnchorPane>

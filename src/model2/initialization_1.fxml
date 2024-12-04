@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Vbox" prefHeight="700.0" prefWidth="1351.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model2.InitializeWindowController">
+   <VBox maxHeight="700.0" maxWidth="1351.0" minHeight="698.0" minWidth="1280.0" prefHeight="700.0" prefWidth="1351.0">
+    <children>
+    <MenuBar prefHeight="25.0" prefWidth="1318.0" style="-fx-background-color: #72f7fc;" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" onAction="#loadHome" onShowing="#loadHome" text="Home">
+                  <items>
+                     <MenuItem mnemonicParsing="false" onAction="#loadHome" text="Go TO Home" />
+                  </items></Menu>
+      </menus>
+            <effect>
+               <Lighting>
+                  <bumpInput>
+                     <Shadow />
+                  </bumpInput>
+                  <light>
+                     <Light.Distant />
+                  </light>
+               </Lighting>
+            </effect>
+    </MenuBar>
+<AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="60.0" prefWidth="1331.0" style="-fx-background-color: #e7e7e7;">
+  <children>
+    <Label alignment="CENTER" layoutX="14.0" prefHeight="60.0" prefWidth="125.0" style="&#10;" text="Subsystem" textAlignment="CENTER" wrapText="false">
+               <font>
+                  <Font size="18.0" fx:id="x5" />
+               </font>
+               <textFill>
+                  <Color blue="0.624" green="0.624" red="0.624" fx:id="x6" />
+               </textFill>
+            </Label>
+      <Label layoutX="475.0" layoutY="22.0" text="Packet APID" textFill="#0a0a0a" />
+<TextField fx:id="APID" layoutX="568.0" layoutY="18.0" prefHeight="25.0" prefWidth="95.0" />
+            <Label layoutX="225.0" layoutY="22.0" text="Subsystem" />
+            <ComboBox fx:id="Subsystem" layoutX="311.0" layoutY="18.0" prefWidth="150.0" />
+               <Button fx:id="SaveForSubsystem" layoutX="745.0" layoutY="13.0" mnemonicParsing="false" onAction="#SaveSubsystemButtonAction" prefHeight="35.0" prefWidth="87.0" style="-fx-background-color: #010b17;" text="Save" textFill="#72f7fc">
+                  <font>
+                     <Font size="14.0" />
+                  </font></Button>
+  </children>
+</AnchorPane>
+    <SplitPane dividerPositions="0.29" focusTraversable="true" prefWidth="1280.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane layoutY="344.0" prefHeight="627.0" prefWidth="409.0" style="-fx-background-color: #e7e7e7;">
+          <children>
+            <Label alignment="CENTER" layoutX="15.0" layoutY="1.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Sensors" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+              <textFill>
+                <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+              </textFill>
+            </Label>
+      <Label layoutX="7.0" layoutY="42.0" text="Sensor Name" />
+      <Label layoutX="12.0" layoutY="84.0" text="Sensor Unit" textFill="#0d0d0d" />
+      <Label layoutX="16.0" layoutY="175.0" text="Description" textFill="#0d0d0d" />
+      <Label layoutX="30.0" layoutY="327.0" text="Type" />
+      <TextField fx:id="SensorByte" layoutX="92.0" layoutY="225.0" />
+      <TextField fx:id="SensorBits" layoutX="92.0" layoutY="256.0" />
+      <TextField fx:id="SensorOrder" layoutX="92.0" layoutY="289.0" />
+      <Label layoutX="35.0" layoutY="229.0" text="byte" />
+      <Label layoutX="36.0" layoutY="260.0" text="bits" />
+      <Label layoutX="32.0" layoutY="293.0" text="order" />
+       <CheckBox fx:id="Range" layoutX="21.0" layoutY="145.0" mnemonicParsing="false" onMouseClicked="#enableRange" text="Range" />
+      <TextField fx:id="SensorName" layoutX="91.0" layoutY="38.0" />
+      <TextField fx:id="SensorUnit" layoutX="91.0" layoutY="72.0" />
+      <TextArea fx:id="Description" layoutX="92.0" layoutY="175.0" prefHeight="47.0" prefWidth="149.0" />
+      <TextField fx:id="ONField" disable="true" layoutX="137.0" layoutY="354.0" prefHeight="25.0" prefWidth="47.0" promptText="ON" />
+      <TextField fx:id="OFFfiled" disable="true" layoutX="193.0" layoutY="354.0" prefHeight="25.0" prefWidth="47.0" promptText="OFF" />
+      <TextField fx:id="StatusField" disable="true" layoutX="137.0" layoutY="397.0" prefHeight="25.0" prefWidth="47.0" promptText="Num" />
+      <TextField fx:id="EquationField" disable="true" layoutX="212.0" layoutY="439.0" prefHeight="25.0" prefWidth="95.0" />
+       <RadioButton fx:id="OnOff" layoutX="46.0" layoutY="358.0" mnemonicParsing="false" onMouseClicked="#enableONOFF" text="ON-OFF" />
+      <RadioButton fx:id="Equation" layoutX="46.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#enableEquation" prefHeight="17.0" prefWidth="68.0" text="Equation" />
+      <RadioButton fx:id="Status" layoutX="46.0" layoutY="401.0" mnemonicParsing="false" onMouseClicked="#enableStatus" text="Status" />
+                  <Button layoutX="97.0" layoutY="551.0" mnemonicParsing="false" onAction="#PutIntoTable" prefHeight="25.0" prefWidth="149.0" text="Preview" />
+      <TextField fx:id="RangeMin" disable="true" layoutX="177.0" layoutY="141.0" prefHeight="25.0" prefWidth="71.0" promptText="Min" />
+                     <TextField fx:id="RangeMax" disable="true" layoutX="94.0" layoutY="141.0" prefHeight="25.0" prefWidth="71.0" promptText="Max" />
+                     <Label layoutX="24.0" layoutY="112.0" text="Format" />
+                     <TextField fx:id="StatusField1" disable="true" layoutX="193.0" layoutY="397.0" prefHeight="25.0" prefWidth="68.0" promptText="Vakue" />
+                     <TextField fx:id="EQuStatusField1" disable="true" layoutX="216.0" layoutY="474.0" prefHeight="25.0" prefWidth="38.0" />
+                     <TextField fx:id="EQuStatusField2" disable="true" layoutX="183.0" layoutY="506.0" prefHeight="25.0" prefWidth="68.0" />
+                     <Button fx:id="ADD1" disable="true" layoutX="268.0" layoutY="397.0" mnemonicParsing="false" onAction="#ADDstatus" prefHeight="25.0" prefWidth="47.0" text="ADD" />
+                     <Button fx:id="ADD2" disable="true" layoutX="262.0" layoutY="506.0" mnemonicParsing="false" onAction="#ADDEQUstatus" prefHeight="25.0" prefWidth="47.0" style="-fx-background-color: #ffff;" text="ADD" />
+                     <RadioButton fx:id="EQuNormal" disable="true" layoutX="133.0" layoutY="443.0" mnemonicParsing="false" onMouseClicked="#enableEquationNormal" text="Norml" />
+                     <RadioButton fx:id="EQuStatus" disable="true" layoutX="133.0" layoutY="478.0" mnemonicParsing="false" onMouseClicked="#enableEquationStatus" text="EQuStatus" />
+                     <RadioButton fx:id="positiveFormat" layoutX="99.0" layoutY="112.0" mnemonicParsing="false" text="+" />
+                     <RadioButton fx:id="NegativeFormat" layoutX="152.0" layoutY="112.0" mnemonicParsing="false" text="-" />
+          </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="634.0" prefWidth="863.0" style="-fx-background-color: #e7e7e7;" SplitPane.resizableWithParent="false">
+          <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="1.0" style="&#10;" text="View" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x7" />
+                     </font>
+                     <textFill>
+                        <Color blue="0.624" green="0.624" red="0.624" fx:id="x8" />
+                     </textFill>
+                  </Label>
+               <TableView fx:id="TableView" layoutX="12.0" layoutY="32.0" prefHeight="484.0" prefWidth="877.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="15.0">
+        <columns>
+                        <TableColumn fx:id="SubsystemCol" prefWidth="68.0" text="Subsystem" />
+            <TableColumn fx:id="SensorCol" editable="false" prefWidth="43.0" text="Sensor" />
+          <TableColumn fx:id="UnitCol" prefWidth="48.0" text="Unit" />
+                           <TableColumn fx:id="FormatCol" prefWidth="51.0" text="Format" />
+                           <TableColumn fx:id="BitCol" prefWidth="49.0" text="Bit" />
+                           <TableColumn fx:id="ByteCol" prefWidth="58.0" text="Byte" />
+                           <TableColumn fx:id="OrderCol" prefWidth="52.0" text="Oreder" />
+                           <TableColumn prefWidth="63.0" text="Range">
+                              <columns>
+                  <TableColumn fx:id="MaxCol" prefWidth="40.0" text="Max" />
+                  <TableColumn fx:id="MinCol" prefWidth="36.0" text="Min" />
+                              </columns>
+                           </TableColumn>
+            <TableColumn prefWidth="350.0" text="Type">
+               <columns>
+                  <TableColumn prefWidth="72.0" text="ON-OFF">
+                     <columns>
+                        <TableColumn fx:id="ONCol" prefWidth="40.0" text="ON" />
+                        <TableColumn fx:id="OFFCol" prefWidth="38.0" text="OFF" />
+                     </columns>
+                  </TableColumn>
+                  <TableColumn prefWidth="133.0" text="Status">
+                                    <columns>
+                                       <TableColumn fx:id="StatusNumCol" prefWidth="54.0" text="Num" />
+                                       <TableColumn fx:id="StatusValueCol" prefWidth="59.0" text="Value" />
+                                    </columns></TableColumn>
+                  <TableColumn prefWidth="149.0" text="Equation">
+                     <columns>
+                        <TableColumn fx:id="EquationCol" prefWidth="58.0" text="Equation" />
+                        <TableColumn prefWidth="129.0" text="Range">
+                                          <columns>
+                                             <TableColumn fx:id="RangeNum" prefWidth="39.0" text="Num" />
+                                             <TableColumn fx:id="RangeValue" prefWidth="40.0" text="Value" />
+                                          </columns></TableColumn>
+                     </columns>
+                  </TableColumn>
+               </columns>
+            </TableColumn>
+                           <TableColumn fx:id="DescriptionCol" prefWidth="118.0" text="Description" />
+        </columns>
+      </TableView>
+                  <Button layoutX="677.0" layoutY="535.0" mnemonicParsing="false" onAction="#SaveIntoDB" prefHeight="35.0" prefWidth="117.0" style="-fx-background-color: #010b17;" text="Save" textFill="#72f7fc">
+                        <font>
+                           <Font size="14.0" />
+                        </font></Button>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</VBox>
+</AnchorPane>
